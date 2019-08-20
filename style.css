@@ -1,0 +1,10 @@
+.container {
+    display: grid;
+	background-color: rgb(131, 128, 128);
+	border: 1px solid rgb(102, 101, 101);
+	grid-gap: 1px;
+	justify-self: center; 
+	max-width: 292px;
+	height: auto;
+	margin: 0 auto;
+}
