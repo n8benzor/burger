@@ -1,30 +1,45 @@
-<h2>Eat-Da-Burger</h2>
+<h2>E A T - D A - B U R G E R</h2>
+<p>_ ______________________________ _</p>
 
-<h3>Your Burgers</h3>
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+<h3>YOUR BURGERS</h3>
 
-<h3>Devoured</h3>
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</ul>
+    <ul class="list-group">
+        {{#each burgers}}
+        {{#unless this.devoured}}
+        <li class="list-group-item">
 
-<h2>Add a Burger</h2>
-<form class="create-form">
+            <p>{{this.name}}</p>
 
-  <div class="form-group">
-    <label for="ca">Name your burger:</label>
-    <input type="text" id="ca" name="name">
-  </div>
 
-  <button type="submit">Add that burger!</button>
-</form>
+            <form action="api/burgers/{{this.id}}?_method=PUT" method="POST">
+                <input type="hidden" name="devoured" value="true">
+                <button type="submit">Devour it!</button>
+            </form>
+
+        </li>
+        {{/unless}}
+        {{/each}}
+    </ul>
+
+
+
+<h3>DEVOURED BURGERS</h3>
+     
+            <ul class="list-group">
+                {{#each burgers}}
+                {{#if this.devoured}}
+                <li class="list-group-item">
+                    <p>{{this.name}}</p>
+                </li>
+                {{/if}}
+                {{/each}}
+            </ul>
+
+        <p>_ ______________________________ _</p>
+
+        <h3>ADD A BURGER</h3>
+         <form action="/burgers" method="POST">
+      <input type="text" id="name" name="name" placeholder="Enter Your Burger Here">
+      <button type="submit" class="addBurgerButton">Add The Burger</button>
+    </form>
+        <p>_ ______________________________ _</p>
