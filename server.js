@@ -7,6 +7,8 @@ const app = express();
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
 
+// var publicDir = require('path').join(__dirname,'/public');
+// app.use(express.static(publicDir));
 // Parse application body as JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

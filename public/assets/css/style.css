@@ -4,13 +4,31 @@
 }
 .grid {
     display: grid;
-    grid-template-columns: 150px auto 150px;
+    grid-template-columns: auto 300px auto;
     grid-gap: 1em;
   }
   
   header, footer {
     grid-column: 1 / 4;
   }
+
+.section {
+    text-align: center;
+}
+
+#title {
+    line-height: 1;
+}
+
+#burger-logo {
+    height: 75px;
+    width: 75px;
+}
+
+#burger-add {
+    height: 100px;
+    width: 100px;
+}
   
 .sidebar-left {
     height: auto;
@@ -31,16 +49,68 @@
   body {
     margin: 0 auto;
     max-width: 56em;
+    min-width: 900px;
     padding: 1em 0;
+    font-family: 'Bevan', cursive;
+    font-size: 10pt;
+    background-image: url("../images/woodbg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
   }
   
   header,
   aside,
   article,
   footer {
-    background: #eaeaea;
+    background: #e2d6c2;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
-    height: 25vh;
+    /* height: 25vh; */
+  }
+
+  header {
+      height: 150px;
+      align-items: center;
+  }
+
+  footer {
+      height: 50px;
+      align-items: center;
+  }
+
+  article {
+    align-items: center;
+  }
+
+  aside, article {
+      padding: 10px;
+  }
+
+  a {
+      text-decoration: none;
+  }
+
+  a:hover {
+    color: rgb(146, 4, 4);
+  }
+
+  a:visited {
+      color: rgb(0, 0, 0);
+  }
+
+  li {
+      list-style: none;
+  }
+
+  #burger-list {
+      color: rgb(146, 4, 4);
+  }
+
+  .change-burger {
+      border: none;
+      background: none;
+    color: rgb(146, 4, 4);
   }

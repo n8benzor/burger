@@ -1,52 +1,73 @@
 <div class="grid">
 
-<header>
-<h2>E A T - D A - B U R G E R</h2>
-<br>
-<p>_ ______________________________ _</p>
-<img src="public\assets\img\bwburger.png">
-</header>
+    <header>
+        <div class="section">
+            <h1 id="title"><i class="fas fa-hamburger" type="submit" id="devourBurger"></i> E A T - D A - B U R G E R <i
+                    class="fas fa-hamburger" type="submit" id="devourBurger"></i></h1>
+
+            <p>_ __ ______________________________________ __ _</p>
+        </div>
+    </header>
 
 
- 
 
 
-<aside class="sidebar-left">
-<h3>YOUR BURGERS</h3>
-<br>
-    <ul class="list-group">
-        {{#each burgers}}
-        {{#unless this.devoured}}
-        <li class="list-group-item">
 
-            <p>{{this.name}}</p>
+    <aside class="sidebar-left">
+        <div class="section">
+            <h3 id="burger-list">YOUR BURGERS</h3>
+            <p>_ ______________ _</p>
+            <br>
+            <ul class="list-group">
+                <span>
+                    {{#each burgers}}
+                    {{#unless this.devoured}}
+
+                    <li>
+                        {{name}}
+
+                        <button class="change-burger" data-id="{{id}}" data-newsleep="{{devour}}">
+                            {{#if devoured}}SLEEP TIME!{{else}}<i class="fas fa-hamburger" id="devourBurger"></i> DEVOUR
+                            IT!{{/if}}
+                        </button>
+                    </li>
+                    {{!-- <li class="list-group-item">
+
+                <p>{{this.name}}</p>
 
 
-            <form action="api/burgers/devoured/{{this.id}}?_method=PUT" method="POST">
-            
-                <input type="hidden" name="devoured" value="true">
-                <button type="submit" id="devourBurger">Devour it!</button>
+                <form action="api/burgers/devoured/{{this.id}}?_method=PUT" method="POST">
 
+                    <input type="hidden" name="devoured" value="true">
+                    <button ><i class="fas fa-hamburger" id="devourBurger"></i> Devour it!</button>
+                    
+                </form>
+
+            </li> --}}
+                    {{/unless}}
+                    {{/each}}
+                </span>
+            </ul>
+        </div>
+    </aside>
+
+    <article>
+        <div class="section">
+            <h3>CREATE A BURGER</h3>
+            <img src="assets/images/bwburger.png" id="burger-logo">
+            <form action="api/burgers" method="POST">
+                <input type="text" id="name" name="name" placeholder="Enter Your Burger Here">
+                <button type="submit" class="addBurger">Add it!</button>
             </form>
-
-        </li>
-        {{/unless}}
-        {{/each}}
-    </ul>
-</aside>
-
-<article>
-<h3>ADD A BURGER</h3>
-    <form action="api/burgers" method="POST">
-      <input type="text" id="name" name="name" placeholder="Enter Your Burger Here">
-      <button type="submit" class="addBurger">Add The Burger</button>
-    </form>
-</article>
+        </div>
+    </article>
 
 
-<aside class="sidebar-right">
-<h3>DEVOURED BURGERS</h3>
-     
+    <aside class="sidebar-right">
+        <div class="section">
+            <h3 id="burger-list">DEVOURED BURGERS</h3>
+            <p>_ ____________________ _</p>
+            <br>
             <ul class="list-group">
                 {{#each burgers}}
                 {{#if this.devoured}}
@@ -56,11 +77,11 @@
                 {{/if}}
                 {{/each}}
             </ul>
-</aside>
+        </div>
+    </aside>
 
-<footer>
-    Footer
-  </footer>
-        
+    <footer>
+        <p><a href="/api/burgers">API Burgers</a> | <a href="https://github.com/n8benzor/burger">GitHub Repo</a></p>
+    </footer>
+
 </div>
-        
