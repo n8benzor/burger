@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 150px auto 150px;
+    grid-gap: 1em;
+  }
+  
+  header, footer {
+    grid-column: 1 / 4;
+  }
+  
+.sidebar-left {
+    height: auto;
+}
+
+.sidebar-right {
+    height: auto;
+}
+
+  @media all and (max-width: 700px) {
+    aside,
+    article {
+      grid-column: 1 / 4;
+    }
+  }
+  
+  /* Demo Specific Styles */
+  body {
+    margin: 0 auto;
+    max-width: 56em;
+    padding: 1em 0;
+  }
+  
+  header,
+  aside,
+  article,
+  footer {
+    background: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+  }
