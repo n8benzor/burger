@@ -1,11 +1,14 @@
+console.log("the javascript file is working")
+
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-    $("#devourBurger").on("click", function(event) {
-      var id = $(this).data("id");
-      var newDevoured = $(this).data("devour");
+    $(".change-burger").on("click", function(event) {
+        console.log("button licked");
+      let id = $(this).data("id");
+      var newDevoured = $(this).data("devoured");
   
       var newDevourState = {
-        devoured: devour
+        devoured: true
       };
     
       // Send the PUT request.
@@ -39,8 +42,24 @@ $(function() {
           console.log("created new burger");
           // Reload the page to get the updated list
           location.reload();
+        // res.redirect("/");
         }
       );
     });
+
+    $(".delete-burger").on("click", function(event) {
+        let id = $(this).data("id");
+    
+        // Send the DELETE request.
+        $.ajax("/api/burgers/" + id, {
+          type: "DELETE"
+        }).then(
+          function() {
+            console.log("deleted burger", id);
+            // Reload the page to get the updated list
+            location.reload();
+          }
+        );
+      });
   });
   

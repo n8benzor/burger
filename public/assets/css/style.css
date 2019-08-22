@@ -4,7 +4,7 @@
 }
 .grid {
     display: grid;
-    grid-template-columns: auto 300px auto;
+    grid-template-columns: 400px 300px 400px;
     grid-gap: 1em;
   }
   
@@ -18,11 +18,12 @@
 
 #title {
     line-height: 1;
+    font-size: 25pt;
 }
 
 #burger-logo {
-    height: 75px;
-    width: 75px;
+    height: 150px;
+    width: 150px;
 }
 
 #burger-add {
@@ -49,7 +50,7 @@
   body {
     margin: 0 auto;
     max-width: 56em;
-    min-width: 900px;
+    min-width: 1100px;
     padding: 1em 0;
     font-family: 'Bevan', cursive;
     font-size: 10pt;
@@ -72,7 +73,7 @@
   }
 
   header {
-      height: 150px;
+      height: 125px;
       align-items: center;
   }
 
@@ -81,12 +82,13 @@
       align-items: center;
   }
 
-  article {
+  /* article {
     align-items: center;
-  }
+  } */
 
   aside, article {
       padding: 10px;
+      height: 400px;
   }
 
   a {
@@ -107,10 +109,40 @@
 
   #burger-list {
       color: rgb(146, 4, 4);
+      line-height: 1;
+      padding-top: 5px;
+  }
+
+  #name {
+      line-height: 1.5;
+  }
+
+  .addBurger {
+    border: 1px solid black;
+    margin-left: 10px;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-family: 'Bevan', cursive;
   }
 
   .change-burger {
-      border: none;
-      background: none;
-    color: rgb(146, 4, 4);
+      border: 1px solid black;
+      margin-left: 10px;
+      padding-left: 2px;
+      padding-right: 2px;
+      font-family: 'Bevan', cursive;
+      /* background: none; */
+      /* color: rgb(146, 4, 4); */
+  }
+
+  .delete-burger {
+    border: 1px solid black;
+    margin-left: 10px;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-family: 'Bevan', cursive;
+  }
+
+  li {
+      margin-bottom: 10px;
   }

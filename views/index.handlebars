@@ -2,10 +2,10 @@
 
     <header>
         <div class="section">
-            <h1 id="title"><i class="fas fa-hamburger" type="submit" id="devourBurger"></i> E A T - D A - B U R G E R <i
-                    class="fas fa-hamburger" type="submit" id="devourBurger"></i></h1>
+            <p id="title"><i class="fas fa-hamburger" type="submit" id="devourBurger"></i> E A T - D A - B U R G E R <i
+                    class="fas fa-hamburger" type="submit" id="devourBurger"></i></p>
 
-            <p>_ __ ______________________________________ __ _</p>
+            <p>_ __ __________________________________________________ __ _</p>
         </div>
     </header>
 
@@ -24,11 +24,11 @@
                     {{#unless this.devoured}}
 
                     <li>
-                        {{name}}
+                        <i class="fas fa-hamburger" id="devourBurger"></i> {{name}}
 
-                        <button class="change-burger" data-id="{{id}}" data-newsleep="{{devour}}">
-                            {{#if devoured}}SLEEP TIME!{{else}}<i class="fas fa-hamburger" id="devourBurger"></i> DEVOUR
-                            IT!{{/if}}
+                        <button class="change-burger" data-id="{{id}}" data-devoured="{{devour}}">
+                            {{!-- Devour it! --}}
+                            <img src="assets/images/knifefork.png" id="knife-fork">
                         </button>
                     </li>
                     {{!-- <li class="list-group-item">
@@ -53,10 +53,11 @@
 
     <article>
         <div class="section">
-            <h3>CREATE A BURGER</h3>
+            <h3 id="burger-list">CREATE A BURGER</h3>
+            <p>_ __________________ _</p>
             <img src="assets/images/bwburger.png" id="burger-logo">
             <form action="api/burgers" method="POST">
-                <input type="text" id="name" name="name" placeholder="Enter Your Burger Here">
+                <input type="text" id="name" name="name" placeholder="Create Your Burger Here">
                 <button type="submit" class="addBurger">Add it!</button>
             </form>
         </div>
@@ -71,9 +72,16 @@
             <ul class="list-group">
                 {{#each burgers}}
                 {{#if this.devoured}}
-                <li class="list-group-item">
+
+                <li>
+                        <i class="fas fa-hamburger" id="delete-burger"></i> {{name}}
+
+                        <button class="delete-burger" data-id="{{this.id}}">I'm Full!</button>
+                    </li>
+
+                {{!-- <li class="list-group-item">
                     <p>{{this.name}}</p>
-                </li>
+                </li> --}}
                 {{/if}}
                 {{/each}}
             </ul>
