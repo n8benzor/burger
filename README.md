@@ -59,6 +59,7 @@ This application relies on several technologies.  Node.js is the primary backend
 ![dependencies](https://github.com/n8benzor/burger/blob/master/public/assets/images/dependencies.png?raw=true)
 
 This app uses an MVC (model, view, controller) design pattern to organize the application files and also makes the application more manageable at the development level and testing level.
+
 ![MVC](https://github.com/n8benzor/burger/blob/master/public/assets/images/mvc.png?raw=true)
 
 The Model managing the burger data:
