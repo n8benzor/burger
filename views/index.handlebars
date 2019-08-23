@@ -28,7 +28,7 @@
 
                         <button class="change-burger" data-id="{{id}}" data-devoured="{{devour}}">
                             {{!-- Devour it! --}}
-                            <img src="assets/images/knifefork.png" id="knife-fork">
+                           <i class="fas fa-utensils fa-2x" id="utensils"></i>
                         </button>
                     </li>
                     {{!-- <li class="list-group-item">
@@ -56,9 +56,13 @@
             <h3 id="burger-list">CREATE A BURGER</h3>
             <p>_ __________________ _</p>
             <img src="assets/images/bwburger.png" id="burger-logo">
-            <form action="api/burgers" method="POST">
+            <form class="create-form">
                 <input type="text" id="name" name="name" placeholder="Create Your Burger Here">
-                <button type="submit" class="addBurger">Add it!</button>
+                <button type="submit" class="addBurger">
+                     
+                    {{!-- <img src="assets/images/bbq.png" id="grill-logo"> --}}
+                    <i class="far fa-check-circle fa-2x" id="check"></i>
+                    </button>
             </form>
         </div>
     </article>
@@ -76,7 +80,10 @@
                 <li>
                         <i class="fas fa-hamburger" id="delete-burger"></i> {{name}}
 
-                        <button class="delete-burger" data-id="{{this.id}}">I'm Full!</button>
+                        <button class="delete-burger" data-id="{{this.id}}">
+                            {{!-- I'm Full! --}}
+                            <i class="fas fa-trash fa-2x"  id="trash"></i>
+                            </button>
                     </li>
 
                 {{!-- <li class="list-group-item">
@@ -89,7 +96,7 @@
     </aside>
 
     <footer>
-        <p><a href="/api/burgers">API Burgers</a> | <a href="https://github.com/n8benzor/burger">GitHub Repo</a></p>
+        <p id="footer-links"><a href="/api/burgers">API Burgers</a> | <a href="https://github.com/n8benzor/burger">GitHub Repo</a></p>
     </footer>
 
 </div>

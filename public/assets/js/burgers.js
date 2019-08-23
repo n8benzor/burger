@@ -24,8 +24,9 @@ $(function() {
       );
     });
   
-    $(".addBurger").on("submit", function(event) {
+    $(".create-form").on("submit", function(event) {
       // Make sure to preventDefault on a submit event.
+      console.log("this button was clicked");
       event.preventDefault();
   
       let newBurger = {
@@ -42,7 +43,7 @@ $(function() {
           console.log("created new burger");
           // Reload the page to get the updated list
           location.reload();
-        // res.redirect("/");
+         
         }
       );
     });

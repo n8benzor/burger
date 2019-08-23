@@ -26,6 +26,12 @@
     width: 150px;
 }
 
+#grill-logo {
+  height: 45px;
+  width: 45px;
+}
+
+
 #burger-add {
     height: 100px;
     width: 100px;
@@ -54,6 +60,7 @@
     padding: 1em 0;
     font-family: 'Bevan', cursive;
     font-size: 10pt;
+    background-color: rgb(44,47,50);
     background-image: url("../images/woodbg.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -93,14 +100,19 @@
 
   a {
       text-decoration: none;
+      color: black;
   }
 
   a:hover {
     color: rgb(146, 4, 4);
   }
 
+  /* #footer-links:hover {
+    color: rgb(146, 4, 4);
+  } */
+
   a:visited {
-      color: rgb(0, 0, 0);
+      color: rgb(146, 4, 4);
   }
 
   li {
@@ -115,34 +127,60 @@
 
   #name {
       line-height: 1.5;
+      background: none;
+      box-sizing: border-box;
+      border: none;
+      border-bottom: 2px solid rgb(0, 0, 0);
+  }
+
+  #name:focus {
+    outline: none;
+    background: none;
   }
 
   .addBurger {
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    border: none;
     margin-left: 10px;
     padding-left: 2px;
     padding-right: 2px;
     font-family: 'Bevan', cursive;
+    background: none;
   }
 
   .change-burger {
-      border: 1px solid black;
+      /* border: 1px solid black; */
+      border: none;
       margin-left: 10px;
       padding-left: 2px;
       padding-right: 2px;
       font-family: 'Bevan', cursive;
-      /* background: none; */
+      background: none;
       /* color: rgb(146, 4, 4); */
   }
 
   .delete-burger {
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    border: none;
     margin-left: 10px;
     padding-left: 2px;
     padding-right: 2px;
     font-family: 'Bevan', cursive;
+    background: none;
   }
 
   li {
       margin-bottom: 10px;
+  }
+
+  #check:hover {
+    color: rgb(146, 4, 4);
+  }
+
+  #trash:hover {
+    color: rgb(146, 4, 4);
+  }
+
+  #utensils:hover {
+    color: rgb(146, 4, 4);
   }
