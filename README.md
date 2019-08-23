@@ -78,12 +78,15 @@ The Controller handling the routes:
   
 
 Click on the Heroku link above to visit the Eat-Da-Burger website. Once on the page you can navigate to the middle section of the body and enter in the name of your burger (Create):
+
 ![create a burger](https://github.com/n8benzor/burger/blob/master/public/assets/images/createburger.png?raw=true)
 
 You can click the check mark once you are finished entering the name of your burger. Your burger you just created will then be added into the "Your Burgers" list to the left(Read):
+
 ![your burgers](https://github.com/n8benzor/burger/blob/master/public/assets/images/yourburgers.png?raw=true)
 
 In this list you can view all of the burgers you have created and once you have decided to devour a burger you can click on the knife and fork button next to that burger to devour it! The devoured burgers will move into another list called "Devoured Burgers" located on the right side of the body of the page (Update):
+
 ![devoured burgers](https://github.com/n8benzor/burger/blob/master/public/assets/images/devouredburgers.png?raw=true)
 
 In the "Devoured Burgers" list the user can view all of their devoured burgers and once they are completely finished with a burger they can permanently delete that burger by clicking on the trash can button to the right of that burger (Delete).
