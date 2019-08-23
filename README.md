@@ -27,7 +27,7 @@
   
   
 
--  **Heroku Live Link:** 
+-  **Heroku Live Link:** [EAT-DA-BURGER Deployed](https://aqueous-taiga-95665.herokuapp.com)
 
   
 
@@ -59,7 +59,6 @@ This application relies on several technologies.  Node.js is the primary backend
 ![dependencies](https://github.com/n8benzor/burger/blob/master/public/assets/images/dependencies.png?raw=true)
 
 This app uses an MVC (model, view, controller) design pattern to organize the application files and also makes the application more manageable at the development level and testing level.
-
 ![MVC](https://github.com/n8benzor/burger/blob/master/public/assets/images/mvc.png?raw=true)
 
 The Model managing the burger data:
@@ -69,6 +68,7 @@ The layout View:
 ![layout view](https://github.com/n8benzor/burger/blob/master/public/assets/images/views.png?raw=true)
 
 The Controller handling the routes:
+
 ![controller](https://github.com/n8benzor/burger/blob/master/public/assets/images/controller.png?raw=true)
 
 ***
